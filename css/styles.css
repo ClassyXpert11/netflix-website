@@ -1,0 +1,244 @@
+/*--------------------------------------------------------------------realtime colours import--------------------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700|Roboto Mono:400');
+
+:root {
+  --text: #f8d8d8;
+  --background: #080202;
+  --primary: #820909;
+  --secondary: #2b0808;
+  --accent: #d62929;
+}
+
+body {
+  font-family: 'Roboto Mono';
+  font-weight: 400;
+  background: var(--background);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--text);
+  font-family: 'Roboto' !important;
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+h1 {font-size: 3.053rem; /* 48.8px */}
+h2 {font-size: 2.442rem; /* 39.04px */}
+h3 {font-size: 1.954rem; /* 31.2px */}
+h4 {font-size: 1.563rem; /* 24.96px */}
+h5 {font-size: 1.250rem; /* 20px */}
+small {font-size: 0.800rem; /* 12.8px */}
+/*--------------------------------------------------------------------realtime colours import--------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------navbar styling--------------------------------------------------------------------------------------*/
+.nav-bar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 60%;
+  background-color: transparent;
+  position: absolute;
+  z-index: 1;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-bar-container nav a {
+  padding: 3px 7px;
+  margin: 0 5px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-bar-container nav a:hover {
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #000;
+  box-shadow: 0 5px 10px 7px #d8d8d8
+}
+
+.nav-bar-container nav {
+  display: flex;
+  margin: 10px;
+}
+
+.netflix-logo {
+  width: 120px;
+  padding: 5px;
+  margin: 5px auto 5px 5px;
+}
+
+.profile-pic {
+  width: 40px;
+  padding: 5px;
+  margin: 5px 5px 5px auto;
+  border-radius: 10px;
+}
+/*--------------------------------------------------------------------navbar styling--------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------scroll bar styling--------------------------------------------------------------------------------------*/
+.movies::-webkit-scrollbar,
+.popular-movies::-webkit-scrollbar,
+.tv-series::-webkit-scrollbar,
+.trending-movies::-webkit-scrollbar {
+  height: 10px;
+}
+.movies::-webkit-scrollbar-thumb,
+.popular-movies::-webkit-scrollbar-thumb,
+.tv-series::-webkit-scrollbar-thumb,
+.trending-movies::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 15px;
+}
+.movies::-webkit-scrollbar-corner,
+.popular-movies::-webkit-scrollbar-corner,
+.tv-series::-webkit-scrollbar-corner,
+.trending-movies::-webkit-scrollbar-corner {
+  display: none;
+}
+/*--------------------------------------------------------------------scroll bar styling--------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------movie container and stuff in there styling-------------------------------------------------------------------------------*/
+.movies, 
+.popular-movies, 
+.tv-series, 
+.trending-movies {
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  text-align: center;
+  scrollbar-color: var(--accent) var(--secondary);
+  scrollbar-width: auto;
+}
+
+.movie-list, 
+.popular-movies-list, 
+.tv-list, 
+.trending-movie-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.movies .movie-img, 
+.popular-movies .popular-movie-img, 
+.tv-series .tv-img, 
+.trending-movies .trending-movie-img {
+  width: 250px;
+}
+
+.movies .movie-name, 
+.popular-movies .popular-movie-name, 
+.tv-series .tv-name,
+.trending-movies .trending-movie-name {
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+/*---------------------------------------------------------movie container and stuff in there styling-------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------video styling----------------------------------------------------------------------------------------------*/
+.trailer-vid video {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.trailer-vid p {
+  position: absolute;
+  top: 60%;
+  bottom: 50%;
+  left: 5%;
+  right: 0;
+  max-width: 50%;
+  font-size: 0.8em;
+  color: #fff;
+}
+
+.trailer-vid h2 {
+  position: absolute;
+  top: 48%;
+  bottom: 50%;
+  left: 5%;
+  right: 0;
+  max-width: 70%;
+  color: #fff;
+}
+
+.fa-solid, .fa-regular {
+  position: absolute;
+  top: 75%;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.fa-play {
+  left: 5%;
+  display: none; 
+}
+
+.fa-pause {
+  left: 5%;
+}
+
+.fa-plus {
+  left: 9%;
+}
+
+.fa-circle-check {
+  left: 9%;
+  display: none;
+}
+
+.my-list-box {
+  background-color: #fff;
+  font-family: 'Roboto Mono';
+}
+
+.fa-volume-high {
+  left: 90%;
+}
+
+.fa-volume-xmark {
+  left: 90%;
+  display: none;
+}
+
+.fa-pause.active,
+.fa-volume-high.active,
+.fa-plus.active {
+  display: none;
+}
+
+.fa-play.active,
+.fa-volume-xmark.active,
+.fa-circle-check.active {
+  display: flex;
+}
+
+
+.netflix-container {
+  margin-bottom: 100px;
+}
+
+.netflix-container h4{
+  margin: 20px 0 10px 0;
+}
+/*------------------------------------------------------------------------video styling----------------------------------------------------------------------------------------------*/
+
